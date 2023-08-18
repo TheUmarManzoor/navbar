@@ -1,70 +1,128 @@
-*{
+/* Reset default margin and padding */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #f2f2f2;
 }
-.navbar{
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
     display: flex;
     justify-content: space-between;
+    background-color: #f2f2f2;
     align-items: center;
-    background-color: #333;
-    padding: 20px;
+    padding: 40px;
     position: relative;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
+
 .logo a {
-    color:white;
-    font-size: 24px;
+    color: #333;
+    font-size: 35px;
     text-decoration: none;
 }
-.nav-links{
+
+.nav-links {
     display: flex;
     list-style: none;
+}
 
-}
 .nav-links li {
-    margin: 12px;
+    margin-right: 20px;
 }
+
 .nav-links a {
     text-decoration: none;
-    color: white;
     transition: color 0.3s;
+    color: #333;
 }
-.nav-links a:hover{
-    color: antiquewhite;
+
+.nav-links a:hover {
+    color: #f39c12;
 }
-.Mobile-menu{
-    cursor: pointer;
+
+.mobile-menu {
     display: none;
+    cursor: pointer;
 }
-.bar{
+
+.bar {
     width: 25px;
     height: 3px;
-    background-color: white;
+    background-color: #333;
     margin: 5px 0;
 }
-@media (max-width:600px) {
-    .nav-links{
+
+@media (max-width: 768px) {
+    .nav-links {
         display: none;
         flex-direction: column;
-        text-align: center;
-        background-color: #333;
         position: absolute;
+        text-align: center;
         width: 100%;
         top: 69px;
-        left: 0px;
+        left: 0;
         opacity: 0.9;
         transition: all 0.5s ease-in-out;
         z-index: 1;
     }
-    .nav-links.active{
+
+    .nav-links.active {
         display: flex;
     }
-    .Mobile-menu{
+
+    .mobile-menu {
         display: block;
     }
     .nav-links li {
-        margin-top: 10px;
         margin-bottom: 20px;
+        margin-top: 10px
     }
-    
+}
+
+/* Apply styles to the section and its children */
+section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px;
+    background-color: #f2f2f2;
+}
+.hero-section {
+    padding: 22px 0 22px 22px;
+    margin: 20px 0 20px 20px;
+}
+
+.main-heading {
+    font-size: 3.5em;
+    padding: 10px;
+    line-height:70px;
+   
+}
+
+.hero-section p {
+    font-size: 1em;
+    padding: 10px 0px 30px 11px;
+     color: #918c8c;
+     line-height: 25px; 
+}
+
+.hero-section a {
+    display: inline-block;
+    padding: 30px 50px;
+    margin-left: 9px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.hero-photo {
+    max-width: 100%;
+   margin-top: 0px;
+   padding: 0px
 }
